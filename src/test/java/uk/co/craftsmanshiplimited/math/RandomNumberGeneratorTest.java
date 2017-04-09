@@ -77,7 +77,5 @@ public class RandomNumberGeneratorTest {
                     (double)entry.getValue() / (COUNT * ITERATIONS),
                     0.001);
         });
-
     }
-
 }
