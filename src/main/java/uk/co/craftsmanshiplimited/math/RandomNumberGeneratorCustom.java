@@ -45,6 +45,7 @@ public class RandomNumberGeneratorCustom implements Randomable {
                 MathArrays.normalizeArray(probabilities, 1.0);
         this.probabilities = new double[normalizedProbabilities.length];
         double sum=0;
+        //Calculate precalc sums
         for(int index=0; index < normalizedProbabilities.length; index++) {
             sum += normalizedProbabilities[index];
             this.probabilities[index] = sum;
