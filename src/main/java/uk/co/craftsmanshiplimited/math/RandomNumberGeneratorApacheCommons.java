@@ -10,11 +10,11 @@ import org.apache.commons.math3.exception.NotANumberException;
 /**
  * Created by Henrik on 09/04/2017.
  */
-public class RandomNumberGenerator {
+public class RandomNumberGeneratorApacheCommons implements Randomable {
 
     private final EnumeratedIntegerDistribution distribution;
 
-    public RandomNumberGenerator(
+    public RandomNumberGeneratorApacheCommons(
             final int[] randomNumbers,
             final double[] probabilities) {
 
@@ -37,6 +37,7 @@ public class RandomNumberGenerator {
         }
     }
 
+    @Override
     public final int nextNum() {
         return this.distribution.sample();
     }
